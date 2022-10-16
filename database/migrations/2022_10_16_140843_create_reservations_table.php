@@ -13,14 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->boolean('is_admin')->default('false');
-            $table->rememberToken();
+            $table->string('first_name');
+            $table->string('last-name');
+            $table->string('email');
+            $table->string('phone_number');
+            $table->date('reservation_date');
+            $table->foreignId('table_id')->constrained();
+            $table->integer('guest_number');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('reservations');
     }
 };
