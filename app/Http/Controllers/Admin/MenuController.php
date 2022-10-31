@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Table;
+use App\Http\Controllers\Controller;
+use App\Models\Menu;
 use Illuminate\Http\Request;
 
-class TableController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class TableController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Table  $table
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function show(Table $table)
+    public function show(Menu $menu)
     {
         //
     }
@@ -52,10 +53,10 @@ class TableController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Table  $table
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function edit(Table $table)
+    public function edit(Menu $menu)
     {
         //
     }
@@ -64,10 +65,10 @@ class TableController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Table  $table
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Table $table)
+    public function update(Request $request, Menu $menu)
     {
         //
     }
@@ -75,10 +76,10 @@ class TableController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Table  $table
+     * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Table $table)
+    public function destroy(Menu $menu)
     {
         //
     }
