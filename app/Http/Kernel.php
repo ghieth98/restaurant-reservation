@@ -26,6 +26,7 @@ use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use RealRashid\SweetAlert\ToSweetAlert;
 
 class Kernel extends HttpKernel
 {
@@ -59,6 +60,7 @@ class Kernel extends HttpKernel
             ShareErrorsFromSession::class,
             VerifyCsrfToken::class,
             SubstituteBindings::class,
+            ToSweetAlert::class,
         ],
 
         'api' => [

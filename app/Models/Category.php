@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Category extends Model
 {
@@ -11,7 +12,7 @@ class Category extends Model
 
     protected $fillable = ['name', 'description'];
 
-    public function menus()
+    public function menus(): BelongsToMany
     {
         return $this->belongsToMany(Menu::class);
     }
