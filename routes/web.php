@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\TableController;
@@ -28,6 +29,13 @@ Route::middleware(['auth', 'admin'])->name('admin.')->prefix('admin')->group(fun
     Route::resource('menus', MenuController::class);
     Route::resource('reservations', ReservationController::class);
     Route::resource('tables', TableController::class);
+    //Media Routing
+    Route::post('/media/{model}/{id}/upload', [MediaController::class, 'upload'])
+        ->name('media.upload');
+    Route::get('/media/{model}/{id}/download', [MediaController::class, 'download'])
+        ->name('media.download');
+    Route::delete('/media/{model}/{id}/delete', [MediaController::class, 'destroy'])
+        ->name('media.destroy');
 });
 
 Route::get('/dashboard', function () {

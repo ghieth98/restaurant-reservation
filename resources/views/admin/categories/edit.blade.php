@@ -31,7 +31,7 @@
                                  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                value="{{ old('name', $category->name) }}" required>
                     </div>
-                    <div class="mb-6">
+                    <div class="">
                         <label for="description"
                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                             Description
@@ -51,6 +51,23 @@
                     Submit
                 </button>
             </form>
+            <div class="mb-4">
+                <form action="{{ route('admin.media.upload', ['Category', $category]) }}" method="post"
+                      enctype="multipart/form-data">
+                    @csrf
+                    <label for="file"
+                           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                        Image
+                    </label>
+                    <input type="file" id="file" name="file"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
+                                   focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
+                                    dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
+                                    dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                           required>
+                </form>
+
+            </div>
         </div>
     </div>
 </x-admin-layout>
