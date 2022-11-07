@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'timer' => env('SWEET_ALERT_TIMER', 2000),
+    'timer' => env('SWEET_ALERT_TIMER', 5000),
 
     /*
     |--------------------------------------------------------------------------
@@ -173,7 +173,7 @@ return [
 
     'middleware' => [
 
-        'autoClose' => env('SWEET_ALERT_MIDDLEWARE_AUTO_CLOSE', true),
+        'autoClose' => env('SWEET_ALERT_MIDDLEWARE_AUTO_CLOSE', false),
 
         'toast_position' => env('SWEET_ALERT_MIDDLEWARE_TOAST_POSITION', 'top-end'),
 

@@ -10,8 +10,6 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class CategoryController extends Controller
 {
@@ -22,7 +20,9 @@ class CategoryController extends Controller
      */
     public function index(): View|Factory|Application
     {
+
         $categories = Category::paginate(5);
+
         return view('admin.categories.index', compact('categories'));
     }
 

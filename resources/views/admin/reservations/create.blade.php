@@ -28,7 +28,7 @@
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                                  dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="Enter first name" required>
+                               placeholder="Enter first name" >
                     </div>
                     <div>
                         <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
@@ -39,7 +39,7 @@
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                                  dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="Enter last name" required>
+                               placeholder="Enter last name" >
                     </div>
                     <div>
                         <label for="email"
@@ -51,7 +51,7 @@
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                                 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="Email Here" required>
+                               placeholder="Email Here" >
                     </div>
                     <div>
                         <label for="phone_number"
@@ -63,16 +63,16 @@
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                                 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="Phone Number Here" required>
+                               placeholder="Phone Number Here" >
                     </div>
                     <div>
                         <label for="reservation_date"
                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                             Reservation Date
                         </label>
-                        <input id="reservation_date" name="reservation_date"
-                               value="{{ old('reservation_date',\Carbon\Carbon::parse($reservation->reservation_date)
-                                        ->format('d M, Y')) }}"
+                        <input id="reservation_date" name="reservation_date" type="datetime-local"
+{{--                               value="{{ old('reservation_date',\Carbon\Carbon::parse($reservation->reservation_date)--}}
+{{--                                        ->format('d M, Y')) }}"--}}
                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
@@ -87,7 +87,7 @@
                         <select name="table_id" id="table_id" class="form-multiselect bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-                                dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                                dark:focus:ring-blue-500 dark:focus:border-blue-500" >
                             @foreach($tables as $id=>$entry)
                                 <option value="{{ $id }} {{ old('table_id') == $id ? 'selected' : '' }}">
                                     {{ $entry }}
@@ -105,7 +105,7 @@
                                focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                                 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                                 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                               placeholder="Guest Number Here" required>
+                               placeholder="Guest Number Here" >
                     </div>
                 </div>
                 <button type="submit"

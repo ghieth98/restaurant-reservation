@@ -41,7 +41,7 @@
                          dark:hover:bg-gray-600">
                             <th scope="row"
                                 class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Image in here
+                                Image
                             </th>
                             <td class="py-4 px-6">
                                 {{$category->name}}
@@ -49,14 +49,14 @@
                             <td class="py-4 px-6">
                                 {{ $category->description }}
                             </td>
-                            <td class="">
+                            <td>
                                 <a href="{{ route('admin.categories.edit', $category->id) }}"
                                    class="font-medium text-white bg-blue-600 rounded p-1.5 dark:bg-blue-500 text-white
                                     hover:bg-blue-800">
                                     Edit
                                 </a>
                             </td>
-                            <td class="pr-4">
+                            <td class="pr-4 ">
                                 <form action="{{ route('admin.categories.destroy', $category->id) }}" method="post"
                                       onsubmit="return confirm('Are you sure?!');">
                                     @csrf

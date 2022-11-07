@@ -23,7 +23,7 @@
 
         <div class="flex flex-row items-center justify-between flex-shrink-0 px-8 py-4">
 
-            <a href="#"
+            <a href="{{ route('admin.index') }}"
                class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
                 Admin Dashboard
             </a>

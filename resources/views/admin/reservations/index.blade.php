@@ -7,12 +7,12 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-            {{--            <div class="flex m-2 p-2 pb-3 ">--}}
-            {{--                <a href="{{ route('admin.reservations.create') }}"--}}
-            {{--                   class="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded-lg text-white text-l ">--}}
-            {{--                    New Reservation--}}
-            {{--                </a>--}}
-            {{--            </div>--}}
+                        <div class="flex m-2 p-2 pb-3 ">
+                            <a href="{{ route('admin.reservations.create') }}"
+                               class="px-4 py-2 bg-blue-500 hover:bg-blue-700 rounded-lg text-white text-l ">
+                                New Reservation
+                            </a>
+                        </div>
 
             <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
