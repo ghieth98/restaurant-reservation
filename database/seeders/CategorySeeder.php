@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Menu;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,6 +16,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::factory()->count(25)->create();
+        Category::factory()->has(Menu::factory()->count(5))
+            ->count(25)->create();
     }
 }

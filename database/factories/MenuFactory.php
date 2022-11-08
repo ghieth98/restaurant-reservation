@@ -17,7 +17,9 @@ class MenuFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->text(7),
+            'description' => fake()->realText(),
+            'price' => fake()->numberBetween(10000, 100000)
         ];
     }
 }

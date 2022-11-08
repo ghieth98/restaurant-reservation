@@ -17,7 +17,10 @@ class TableFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' =>  fake()->text(8),
+            'guest_number' => fake()->randomNumber(),
+            'status' => fake()->boolean(),
+            'location' => fake()->randomNumber(),
         ];
     }
 }

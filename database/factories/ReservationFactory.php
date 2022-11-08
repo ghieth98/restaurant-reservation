@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Table;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,15 @@ class ReservationFactory extends Factory
      */
     public function definition()
     {
+        $tables = collect(Table::all()->modelKeys());
         return [
-            //
+            'first_name' => fake()->firstName,
+            'last_name' => fake()->lastName,
+            'email' => fake()->email,
+            'phone_number' => fake()->phoneNumber,
+            'reservation_date' => fake()->dateTimeBetween(now(), now()->addWeek()),
+            'table_id' => $tables->random(),
+            'guest_number' => fake()->randomNumber(),
         ];
     }
 }
