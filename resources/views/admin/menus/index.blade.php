@@ -53,7 +53,7 @@
                                 {{ $menu->description }}
                             </td>
                             <td class="py-4 px-6">
-                                {{ $menu->price }}
+                                {{ round($menu->price/100, 2) }}$
                             </td>
                             <td class="">
                                 <a href="{{ route('admin.menus.edit', $menu->id) }}"
